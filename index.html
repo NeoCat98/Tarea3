@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de Registro</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<form action="#">
+		<h1>Formulacion del Registro</h1>
+
+		<fieldset>
+			<legend>Personal</legend>
+			<label for="name">Name: </label>
+			<input type="text" name="name" id="name" required pattern="[a-Z]">
+			<label for="birthday">Birthday: </label>
+			<input type="date" name="birthday" id="birthday" required>
+			<label for="favAnimal">Favorite Animal: </label>
+			<input type="text" name="favAnimal" id="favAnimal" required pattern="[a-Z]">
+		</fieldset><br>
+		<fieldset>
+			<legend>Account</legend>
+			<label for="email">Email: </label>
+			<input type="email" name="email" id="email" required>
+			<label for="password">Password: </label>
+			<input type="password" name="password1" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title = "Debe contener al menos 8 caracteres y de esos 8 caracteres al menos uno de ellos tiene que ser  mayuscula, minuscula y un número" required>
+			<label for="password2">Verify Password: </label>
+			<input type="password" name="password2" id="password2">
+		</fieldset><br>
+		<fieldset>
+			<legend>Contact</legend>
+			<label for = "address">Address: </label>
+			<input type="text" name="address" id="address">
+			<label for= "city">City: </label>
+			<input type="text" name="city" id="city"><br><br>
+			<label for="country">Country: </label>
+			<input type="text" name="country" id="country">
+			<label for="number">Phone number: </label>
+			<input type="tel" name="number" id="number" pattern="(?=.*\d).{8}" title="Debe contener 8 numeros">
+		</fieldset><br>
+		<button type="sumbit" name="registro" value="registro">Send</button>
+	</form>
+</body>
+</html>
